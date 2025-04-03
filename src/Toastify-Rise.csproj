@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyTitle>ToastifyRise</AssemblyTitle>
+    <AssemblyDescription>Show toast notification with Apprise</AssemblyDescription>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>img\app.ico</ApplicationIcon>
+    <Title></Title>
+    <Authors>Chucky2401</Authors>
+    <Company></Company>
+    <Product>ToastifyRise</Product>
+    <PackageIcon>app.png</PackageIcon>
+    <PackageId></PackageId>
+    <Description>Show toast notification with Apprise</Description>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <PublishSingleFile>true</PublishSingleFile>
+    <AssemblyName>ToastifyRise</AssemblyName>
+    <RootNamespace>ToastifyRise</RootNamespace>
+    <RepositoryUrl>https://github.com/Chucky2401/toastify-rise</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="img\app.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.3" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="img\app.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="img\error.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="img\info.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="img\success.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="img\warn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
