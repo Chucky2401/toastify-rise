@@ -1,4 +1,7 @@
 ﻿<Project Sdk="WixToolset.Sdk/5.0.2">
+  <PropertyGroup>
+    <OutputName>ToastifyRise_install_v1.0.0</OutputName>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\src\Toastify-Rise.csproj" />
   </ItemGroup>
