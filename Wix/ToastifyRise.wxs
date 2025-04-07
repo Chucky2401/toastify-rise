@@ -1,0 +1,7 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment>
+		<ComponentGroup Id="ToastifyRise" Directory="INSTALLFOLDER">
+			<Files Include="..\src\bin\$(Configuration)\net8.0-windows10.0.17763.0\**" />
+		</ComponentGroup>
+	</Fragment>
+</Wix>
