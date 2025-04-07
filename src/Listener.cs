@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Sockets;
+﻿using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 
 namespace toastifyRise {
@@ -22,7 +16,7 @@ namespace toastifyRise {
 
         public Listener() {
             schema = "http";
-            listeningAddress = "*";
+            listeningAddress = "+";
             listeningPort = 13000;
             server = new HttpListener();
             isListening = false;

@@ -1,18 +1,20 @@
-﻿using System.Net;
+﻿using ToastifyRise.Notifications;
 
 namespace toastifyRise {
-    internal class Manager {
+    public class Manager {
+
         static void Main(string[] args) {
             Toaster();
         }
 
-        public static void Toaster() {
+        static void Toaster() {
             Listener listener = new Listener();
+            NotificationManager notificationManager = new NotificationManager();
+            notificationManager.Init();
 
             // S'abonner à l'événement RequestReceived
             listener.RequestReceived += (results) => {
-                string message = "", type = "info";
-                string? title = null;
+                string message = "", title = "", type = "info";
                 bool persist = false;
 
                 if (results.ContainsKey("message") && !String.IsNullOrEmpty(results["message"]))
@@ -27,8 +29,9 @@ namespace toastifyRise {
                 if (results.ContainsKey("persist") && !String.IsNullOrEmpty(results["persist"]))
                     persist = bool.Parse(results["persist"]);
 
-                Toast.Toasting(message, title, type, persist);
+                ToastWithAvatar.SendToast(title, message, type, persist);
             };
+
 
             // Démarrer l'écoute
             listener.StartListening();
@@ -39,6 +42,7 @@ namespace toastifyRise {
 
             // Arrêter l'écoute
             listener.StopListening();
+            notificationManager.Unregister();
         }
     }
 }
