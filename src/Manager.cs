@@ -2,7 +2,9 @@
 
 namespace toastifyRise {
     internal class Manager {
+
         static void Main(string[] args) {
+
             Toaster();
         }
 
@@ -35,7 +37,10 @@ namespace toastifyRise {
 
             // Garder le programme en cours d'exécution
             Console.WriteLine("Listening for requests. Press Enter to stop.");
-            Console.ReadLine();
+            // For Debug, use the first line
+            // For Realease, use the second one
+            //Console.ReadLine();
+            new ManualResetEvent(false).WaitOne();
 
             // Arrêter l'écoute
             listener.StopListening();
