@@ -1,0 +1,9 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Package Name="ToastifyRise" Manufacturer="Sterimed SAS" Version="1.0.0" UpgradeCode="19CD5694-2A56-40C5-ABF3-BF39B8186B7C">
+		<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
+
+		<Feature Id="Main">
+			<ComponentGroupRef Id="ToastifyRise" />
+		</Feature>
+	</Package>
+</Wix>

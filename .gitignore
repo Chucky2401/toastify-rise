@@ -2,5 +2,5 @@ src/.vs
 src/bin
 src/obj
 
-Wix/bin
-Wix/obj
+installer/bin
+installer/obj
